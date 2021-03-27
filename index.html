@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MUSIC PLAYER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main">
+        <p id="logo"><i class="fas fa-music"></i>MUSIC PLAYER</p>    
+        <div class="left">
+            <img id="track_image">
+            <div class="volume">
+                <p id="volume_show">100</p>
+                <i class="fas fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                <input type="range" min="0" max="100" value="100" onchange="volume_change()" id="volume">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="show-song-no">
+                <p id="present">1</p>
+                <p>/</p>
+                <p id="total">5</p>
+            </div>
+
+            <p id="title">sfdghjkjk</p>
+            <p id="artist">Artist name</p>
+
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fas fa-step-backward"></i></button>
+                <button onclick="justplay()" id="play"><i class="fas fa-play"></i></button>
+                <button onclick="next_song()" id="next"><i class="fas fa-step-forward"></i></button>
+            </div> 
+
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            </div>
+            <button id="auto" onclick="autoplay_switch()">AutoPlay <i class="fas fa-circle-notch"></i> </button>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <div class="footer">
+        <p>Made with <i class="fas fa-heart fa-color2"></i> by Swastik. <i class="fas fa-smile-wink fa-color1"></i> </p>
+    </div>
+</body>
+</html>
